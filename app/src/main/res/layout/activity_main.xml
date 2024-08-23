@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#C9AFD0"
+            android:elevation="4dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/rockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Rock "
+                android:textAlignment="center"
+                android:textColor="#313D5A"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/rockIcon"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:contentDescription="rock hand"
+                android:src="@drawable/hand_rock"
+                app:tint="#0D446F" />
+
+            <TextView
+                android:id="@+id/paperText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="  Paper "
+                android:textAlignment="center"
+                android:textColor="#313D5A"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/paperIcon"
+                android:layout_width="31dp"
+                android:layout_height="match_parent"
+                android:contentDescription="paper hand"
+                android:src="@drawable/hand_paper"
+                app:tint="#0D446F" />
+
+            <TextView
+                android:id="@+id/scissorsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="  Scissors "
+                android:textAlignment="center"
+                android:textColor="#313D5A"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/scissorIcon"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:contentDescription="scissors hand"
+                android:src="@drawable/hand_scissors"
+                app:tint="#0D446F" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEAEA"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="#00000000"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/scoreText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="SCORE: "
+                    android:textAlignment="center"
+                    android:textColor="#0D446F"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/scoreNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#0D446F"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/chooseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="CHOOSE:"
+                android:textColor="#313D5A"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:background="#00000000"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/rockButton"
+                        android:layout_width="126dp"
+                        android:layout_height="106dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:contentDescription="Rock"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/hand_rock"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
+
+                    <TextView
+                        android:id="@+id/rockButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="ROCK"
+                        android:textColor="#313D5A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/paperButton"
+                        android:layout_width="126dp"
+                        android:layout_height="106dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Rock"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/hand_paper" />
+
+                    <TextView
+                        android:id="@+id/paperButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="PAPER"
+                        android:textColor="#313D5A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/scissorsButton"
+                        android:layout_width="126dp"
+                        android:layout_height="106dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Rock"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/hand_scissors" />
+
+                    <TextView
+                        android:id="@+id/scissorsButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="SCISSORS"
+                        android:textColor="#313D5A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/opDecText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="OPPONENT'S DECISION:"
+                    android:textAlignment="center"
+                    android:textColor="#73628A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/opDecImage"
+                    android:layout_width="126dp"
+                    android:layout_height="106dp"
+                    android:clickable="true"
+                    android:contentDescription="Opponent's Decision"
+                    android:paddingBottom="20dp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/timerNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text=""
+                    android:textColor="#73628A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
